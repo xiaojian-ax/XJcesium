@@ -94,10 +94,10 @@ import {DrawHelper} from '../js/Tools-03DrawHelper'
 import widgets from 'cesium/Widgets/widgets.css'
 import {drawApi} from '../js/api/index'
 import FileSaver from 'file-saver'
-import {devPath,devPath2} from '../js/api/path'
+import {devPath , devPath2} from '../js/api/path'
 export default {
   name: 'cesiumViewer',
-  data(){
+  data() {
        return {
            drawer: false,
            x:'',

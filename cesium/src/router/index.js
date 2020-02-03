@@ -10,6 +10,7 @@ import flight from '@/components/flight'
 import draw from '@/components/cesiumDrawHelper'
 import test from '@/components/cesiumDrawHelperTest'
 import convert from '@/components/cesiumDrawHelperConvert'
+import drag from '@/components/vuedrraggable'
 Vue.use(Router)
 
 export default new Router({
@@ -65,6 +66,11 @@ export default new Router({
       path: '/convert',
       name: 'congvert',
       component: convert
+    },
+    {
+      path: '/drag',
+      name: 'drag',
+      component: drag
     }
   ]
 })

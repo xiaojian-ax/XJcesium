@@ -4,22 +4,15 @@ const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
 
-const  cesiumSource = '../node_modules/cesium/Source'
-const  cesiumNavi = '../node_modules/cesium-navigation/navigation'
+const cesiumSource = '../node_modules/cesium/Source'
+const cesiumNavi = '../node_modules/cesium-navigation/navigation'
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
 
 const createLintingRule = () => ({
-  // test: /\.(js|vue)$/,
-  // loader: 'eslint-loader',
-  // enforce: 'pre',
-  // include: [resolve('src'), resolve('test')],
-  // options: {
-  //   formatter: require('eslint-friendly-formatter'),
-  //   emitWarning: !config.dev.showEslintErrorsInOverlay
-  // }
+  
 })
 
 module.exports = {
@@ -49,7 +42,7 @@ module.exports = {
   },
   module: {
     rules: [
-      ...(config.dev.useEslint ? [createLintingRule()] : []),
+      //...(config.dev.useEslint ? [createLintingRule()] : []),
       {
         test: /\.vue$/,
         loader: 'vue-loader',
@@ -87,7 +80,7 @@ module.exports = {
     ],
     // unknownContextRegExp: /^.\/.*$/, // 这里好像会有错误，先注释了
     unknownContextCritical: false
-},
+  },
   node: {
     // prevent webpack from injecting useless setImmediate polyfill because Vue
     // source contains it (although only uses it if it's native).
